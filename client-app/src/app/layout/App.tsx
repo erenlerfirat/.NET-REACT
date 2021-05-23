@@ -7,7 +7,7 @@ import NavBar from './NavBar';
 function App() {
   const [activities,setActivities]=useState<Activity[]>([]);
   useEffect(()=>{
-    axios.get<Activity[]>('http://localhost:3000/FiratAPI/activities').then(response=>{
+    axios.get<Activity[]>('http://localhost:5000/FiratAPI/activities').then(response=>{
       console.log(response);
       setActivities(response.data);
     })
@@ -21,10 +21,7 @@ function App() {
               {activity.title }
               </List.Item>
           ))}
-        </List>
-          
-        
-      
+        </List>     
     </div>
   );
 }
