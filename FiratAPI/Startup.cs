@@ -10,7 +10,7 @@ namespace FiratAPI
     public class Startup
     {
         private readonly IConfiguration _config;
-        public Startup(IConfiguration config)
+         public Startup(IConfiguration config)
         {
             this._config = config;
 

@@ -5,11 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 namespace FiratAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("FiratAPI/[controller]")]
     public class BaseApiController : ControllerBase
     {
-            private IMediator _mediator;
-            
-            protected IMediator Mediator=>_mediator ??= HttpContext.RequestServices.GetService<IMediator>();
+        private IMediator _mediator;
+
+        protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
     }
 }

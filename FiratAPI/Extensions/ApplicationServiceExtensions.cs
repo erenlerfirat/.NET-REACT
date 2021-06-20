@@ -24,7 +24,7 @@ namespace FiratAPI.Extensions
             });
 
             services.AddCors(opt =>
-            {
+            {   //By Default your api does not allow any client to access your server thus we added this CORS Policy permission below.
                 opt.AddPolicy("CorsPolicy", policy => { policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000"); });
 
             });
